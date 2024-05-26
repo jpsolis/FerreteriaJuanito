@@ -1,0 +1,23 @@
+@if(productos.length > 0){
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(producto of productos; track $index){
+                <tr>
+                    <td>{{producto.id}}</td>
+                    <td>{{producto.descripcion}}</td>
+                    <td>{{producto.precio}}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}@else {
+<div> No hay registros en el sistema...</div>
+}
